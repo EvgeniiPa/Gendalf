@@ -1,0 +1,49 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 106px;
+    background-color: #00B7EC;
+    padding: 0px 10px;
+}
+
+.favicon{
+    width: 74px;
+    height: 84px;
+}
+
+.navigate{
+    display: flex;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    gap: 39px;
+    list-style-type: none;
+    width: 1153рpx;
+    padding: 0px;
+}
+
+.item{
+    min-height: 25px;
+    padding: 6px 2px;
+}
+
+.link{
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.item:hover{
+    border-radius: 5px;
+    background-color: white;
+}
+
+.item:hover .link{
+    color: #00B7EC;
+}

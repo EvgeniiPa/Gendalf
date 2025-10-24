@@ -1,0 +1,33 @@
+.blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #00B7EC;
+    color: #FFFFFF;
+    border:none
+}
+
+.blue:hover{
+    background-color: #FFFFFF;
+    outline: 1px solid #00B7EC;
+    color: #00B7EC;
+}
+
+.green{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    background-color:#9BCC37;
+    color: #FFFFFF;
+    border: none;
+}
+
+.green:hover{
+    background-color: #FFFFFF;
+    outline: 1px solid #9BCC37;
+    color:#9BCC37;
+}

@@ -1,0 +1,26 @@
+.wrapper{
+    width: 100%;
+    background-color: #E9E9E9;
+    padding: 45px 10px;
+}
+
+.values{
+    height: 519px;
+}
+
+.tape{
+    height: 566px;
+}
+
+.title{
+    font-family: "Open Sans", serif;;
+    font-weight: 300;
+    font-size: 36px;
+    color: #00b7ec;
+}
+
+.container{
+    display: flex;
+    gap: 28px;
+    justify-content: space-around;
+}
