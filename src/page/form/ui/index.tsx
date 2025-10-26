@@ -3,17 +3,34 @@ import { useState } from 'react';
 import style from './style.module.css'
 import { CustomInput } from '../../../shared/ui/Input';
 import Icon from '../../../assets/Vector.svg'
+import { type FormApi } from 'final-form';
+
+type TValues = {
+  name: string;
+  phone: string;
+  email:string;
+  position: string;
+  workType: string;
+}
+
+type TErrors = {
+  name?: string;
+  phone?: string;
+  email?:string;
+  position?: string;
+  workType?: string;
+}
 
 export const CustomForm = () => {
-  const [attachedFile, setAttachedFile] = useState(null);
+  const [attachedFile, setAttachedFile] = useState<File | null>(null);
 
-  const onSubmit = async (values, form) => {
+  const onSubmit = async (values: TValues, form: FormApi<TValues>) => {
     console.log('Отправленные данные:', values);
     form.reset();
   };
 
-  const validate = (values) => {
-    const errors = {};
+  const validate = (values: TValues) => {
+    const errors: TErrors = {};
     
     if (!values.name) {
       errors.name = 'Обязательное поле';
@@ -42,7 +59,7 @@ export const CustomForm = () => {
     return errors;
   };
 
-  const handleFileChange = (event, form) => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>, form: FormApi<TValues>) => {
     const file = event.target.files[0];
     if (file) {
       setAttachedFile(file);
@@ -110,7 +127,7 @@ export const CustomForm = () => {
                     <label className={style.titleCategory}>Выберите категорию занятости</label>
                     <div >
                         <Field name="workType" type='radio' value='office'>
-                          {({input, meta}) => (
+                          {({input}) => (
                             <div>
                               <CustomInput id='Работа в офисе' text='Работа в офисе' {...input}/>
                             </div>
@@ -118,7 +135,7 @@ export const CustomForm = () => {
                         </Field>
 
                         <Field name="workType"  type="radio" value='internship'>
-                          {({input, meta}) => (
+                          {({input}) => (
                             <div>
                               <CustomInput  id='Стажировка'  text='Стажировка' {...input}/>
                             </div>
@@ -126,7 +143,7 @@ export const CustomForm = () => {
                         </Field>
                       
                         <Field name="workType" value='remote'  type="radio">
-                          {({input, meta}) => (
+                          {({input}) => (
                             <div>
                               <CustomInput  id='Удаленная работа'  text='Удаленная работа' {...input}/>
                             </div>
@@ -166,7 +183,7 @@ export const CustomForm = () => {
                         />
                         <button
                           type="button"
-                          onClick={() => document.getElementById('resume').click()}
+                          onClick={() => document.getElementById('resume')?.click()}
                           className={style.button}
                         >
                         {'Прикрепить резюме'}

@@ -1,8 +1,6 @@
 import { useRef} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import style from './style.module.css'
 import Left from '../../../assets/LeftArrow.svg'
 import Right from '../../../assets/RightArrow.svg'

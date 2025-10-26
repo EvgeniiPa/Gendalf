@@ -9,28 +9,23 @@ type TCustomInput = {
   value?: string;
   text?: string;
   name?: string;
-  onChange?: (event: any) => void;
-  onBlur?: (event: any) => void;
-  onFocus?: (event: any) => void;
-  checked?: boolean; // Добавлено для radio
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  checked?: boolean; 
 }
 
 
 export const CustomInput = ({  type, 
   placeholder, 
   error,
-  helperText,
   id, 
   value, 
   text, 
   name,
   onChange,
-  onBlur,
-  onFocus,
   checked,
   ...props}: TCustomInput)=>{
 
-    const handleChange = (event)=>{
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>)=>{
         if(onChange) onChange(event)
     }
 
