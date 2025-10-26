@@ -112,3 +112,17 @@
     color: #fff;
 }
 
+@media (max-width: 894px) and (min-width: 375px){
+    .container{
+        width: 100%;
+    }
+
+    .buttons{
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .button{
+        width: 100%;
+    }
+}

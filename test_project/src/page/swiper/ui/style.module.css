@@ -4,6 +4,12 @@
     padding: 45px 10px;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}   
+
 .values{
     height: 519px;
 }
@@ -17,10 +23,5 @@
     font-weight: 300;
     font-size: 36px;
     color: #00b7ec;
-}
-
-.container{
-    display: flex;
-    gap: 28px;
-    justify-content: space-around;
+    margin-bottom: 28px;
 }

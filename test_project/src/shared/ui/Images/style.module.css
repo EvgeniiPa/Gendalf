@@ -1,0 +1,101 @@
+.wrapper{
+    display: flex;
+    gap: 80px;
+    padding-bottom: 40px;
+    margin-left: 43px;
+    min-height: 380px;
+}
+
+.container{
+    position: relative;
+}
+
+.image{
+    width: 284px;
+    height: 200px;
+}
+
+.number-I{
+    position: absolute;
+    top: 33px;
+    left: -31px;
+}
+
+.number-I-I{
+    position: absolute;
+    top: 33px;
+    left: 0px;
+}
+
+.number-two{
+    position: absolute;
+    top: 55px;
+    left: 25px;
+    width: 32px;
+    height: 38px;
+}
+
+.number-I-I-I{
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+.number-three{
+    position: absolute;
+    top: 52px;
+    left: 0px;
+    width: 32px;
+    height: 38px;
+}
+
+.number-I-V{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+}
+
+.number-four{
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: 32px;
+    height: 38px;
+}
+
+.number-V{
+    position: absolute;
+    top: 30px;
+    left: -6px;
+}
+
+.number-five{
+    position: absolute;
+    top: 52px;
+    left: 20px;
+    width: 32px;
+    height: 38px;
+
+}
+
+.description{
+    text-align: center;
+}
+
+.title{
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #666;
+}
+
+.text{
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+}   
