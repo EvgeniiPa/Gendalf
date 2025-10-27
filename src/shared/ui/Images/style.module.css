@@ -7,6 +7,13 @@
 }
 
 .container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-image{
     position: relative;
 }
 
@@ -99,3 +106,15 @@
     font-size: 16px;
     line-height: 137%;
 }   
+
+@media(max-width: 894px) and (min-width: 380px){
+    .title{
+        font-size: 18px;
+        line-height: 167%;
+    }
+
+    .text{
+        font-size: 14px;
+        line-height: 157%;
+    }
+}

@@ -25,3 +25,21 @@
     color: #00b7ec;
     margin-bottom: 28px;
 }
+
+
+@media(max-width: 894px) and (min-width: 380px){
+    .tape{
+        height: 542px;
+    }
+
+    .values{
+        height: 451px;
+    }
+
+    .title{
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        color: #00b7ec;
+    }
+}

@@ -1,11 +1,20 @@
 .wrapper{
+    height: 106px;
+    background-color: #00B7EC;
+    padding: 0px 10px;
+}
+
+.container-desktop{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    height: 106px;
-    background-color: #00B7EC;
-    padding: 0px 10px;
+    height: 100%;
+    padding: 0px 10px; 
+}
+
+.container-mobile{
+    display: none;
 }
 
 .favicon{
@@ -20,6 +29,7 @@
 .list{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 39px;
     list-style-type: none;
     width: 1153рpx;
@@ -46,4 +56,27 @@
 
 .item:hover .link{
     color: #00B7EC;
+}
+
+@media(max-width: 1280px) and (min-width: 986px){
+    .list{
+        gap: 20px;
+    }
+}
+
+
+@media(max-width: 894px) and (min-width: 380px){
+  .wrapper{
+    background-color:white;
+  }
+
+  .container-desktop{
+    display: none;
+  }
+
+  .container-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

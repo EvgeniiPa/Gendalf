@@ -2,8 +2,8 @@ import { Form, Field } from 'react-final-form';
 import { useState } from 'react';
 import style from './style.module.css'
 import { CustomInput } from '../../../shared/ui/Input';
-import Icon from '../../../assets/Vector.svg'
 import { type FormApi } from 'final-form';
+import { Clip } from '../../../assets/Clip';
 
 type TValues = {
   name: string;
@@ -22,6 +22,7 @@ type TErrors = {
 }
 
 export const CustomForm = () => {
+  const [isHovered, setIsHovered] = useState<boolean>(false)
   const [attachedFile, setAttachedFile] = useState<File | null>(null);
 
   const onSubmit = async (values: TValues, form: FormApi<TValues>) => {
@@ -154,7 +155,7 @@ export const CustomForm = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div className={style.textArea}>
                     <Field
                       name="questions"
                       component="textarea"
@@ -185,9 +186,11 @@ export const CustomForm = () => {
                           type="button"
                           onClick={() => document.getElementById('resume')?.click()}
                           className={style.button}
+                          onMouseEnter={() => setIsHovered(true)}
+                          onMouseLeave={() => setIsHovered(false)}
                         >
                         {'Прикрепить резюме'}
-                        <img src={Icon} alt="" className={style.icon}/>
+                          <Clip color={`${isHovered ? "#9BCC37" : 'white'}`}/>
                         </button>
                        
                         {attachedFile && (

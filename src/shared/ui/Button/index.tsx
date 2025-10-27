@@ -2,15 +2,12 @@ import style from './style.module.css'
 
 type TButton = {
     title: string;
-    onClick: ()=>void;
-    color: string;
+    color?: string;
 }
 
-export const Button = ({title, onClick, color}: TButton) =>{
+export const Button = ({title, color}: TButton) =>{
     return(
-        <button 
-            className={color === 'blue'  ? style.blue : style.green}
-            onClick={onClick}>
+        <button className={color === 'white'  ? style.white : style.green}>
             {title}
         </button>
     )

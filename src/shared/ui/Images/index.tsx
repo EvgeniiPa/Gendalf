@@ -24,16 +24,34 @@ export const Images = ()=>{
         <>
             <div className={style.wrapper}>
                 <Swiper
-                    slidesPerView={3.6}
                     grid={{rows: 1}}
                     spaceBetween={80}
                     pagination={{clickable: true}}
                     modules={[Grid, Pagination]}
+                    breakpoints={{
+                        380:{
+                            slidesPerView: 1,
+                        },
+                        650:{
+                            slidesPerView: 2,
+                        },
+                        930:{
+                            slidesPerView: 3,
+                        },
+                        1050:{
+                            slidesPerView: 3.6,
+                        },
+                        1155:{
+                            slidesPerView: 4,
+                        }
+                    }}
                 >
                     <SwiperSlide>
                         <div className={style.container}>
-                            <img src={First} alt="image"   className={style.image}/>
-                            <img src={I} alt="image" className={style.numberI}/>
+                            <div className={style.containerImage}>
+                                <img src={First} alt="image"   className={style.image}/>
+                                <img src={I} alt="image" className={style.numberI}/>
+                            </div>
                             <div className={style.description}> 
                                 <h3 className={style.title}>Быть командой</h3>
                                 <span className={style.text}>Готовность вносить вклад в общие цели команды и достигать ихр</span>
@@ -42,9 +60,11 @@ export const Images = ()=>{
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className={style.container}>
-                            <img src={Second} alt="image" className={style.image}/>
-                            <img src={II} alt="image" className={style.numberII}/>
-                            <img src={NumberTwo} alt="image" className={style.numberTwo}/>
+                            <div className={style.containerImage}>
+                                <img src={Second} alt="image" className={style.image}/>
+                                <img src={II} alt="image" className={style.numberII}/>
+                                <img src={NumberTwo} alt="image" className={style.numberTwo}/>
+                            </div>
                             <div className={style.description}> 
                                 <h3 className={style.title}>Побеждать и не сдаваться</h3>
                                 <span className={style.text}>Быть ориентированным на результат, настойчивым и не сдаваться перед трудностями.</span>
@@ -53,9 +73,11 @@ export const Images = ()=>{
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className={style.container}>
-                            <img src={Third} alt="image" className={style.image}/>
-                            <img src={III} alt="image" className={style.numberIII}/>
-                            <img src={NumberThree} alt="image" className={style.numberThree}/>
+                            <div className={style.containerImage}>
+                                <img src={Third} alt="image" className={style.image}/>
+                                <img src={III} alt="image" className={style.numberIII}/>
+                                <img src={NumberThree} alt="image" className={style.numberThree}/>
+                            </div>
                             <div className={style.description}> 
                                 <h3 className={style.title}>Заботиться о клиентах</h3>
                                 <span className={style.text}>Выполнять обещания и интересоваться потребностями своих клиентов</span>
@@ -64,9 +86,11 @@ export const Images = ()=>{
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className={style.container}>
-                            <img src={Fourth} alt="image" className={style.image}/>
-                            <img src={IV} alt="image"className={style.numberIV}/>
-                            <img src={NumberFour} alt="image" className={style.numberFour}/>
+                            <div className={style.containerImage}>
+                                <img src={Fourth} alt="image" className={style.image}/>
+                                <img src={IV} alt="image"className={style.numberIV}/>
+                                <img src={NumberFour} alt="image" className={style.numberFour}/>
+                            </div>
                             <div className={style.description}> 
                                 <h3 className={style.title}>Быть увлеченным и ответственным</h3>
                                 <span className={style.text}>Вкладывать душу в то, что делаешь и получать от работы удовольствие.</span>
@@ -75,9 +99,11 @@ export const Images = ()=>{
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className={style.container}> 
-                            <img src={Fifth} alt="image" className={style.image}/>
-                            <img src={V} alt="image" className={style.numberV}/>
-                            <img src={NumberFive} alt="image" className={style.numberFive}/>
+                            <div className={style.containerImage}>
+                                <img src={Fifth} alt="image" className={style.image}/>
+                                <img src={V} alt="image" className={style.numberV}/>
+                                <img src={NumberFive} alt="image" className={style.numberFive}/>
+                            </div>
                             <div className={style.description}> 
                                 <h3 className={style.title}>Развиваться</h3>
                                 <span className={style.text}>Постоянно расти личностно и профессионально для достижения поставленных целей.</span>

@@ -43,7 +43,7 @@ export const CustomSwiper = ({type}: CustomSwiper)=>{
 
     return (
         <>
-            <article className={style.wrapper}>
+            <article className={`${type==='values' ? style.values : style.tape,  style.wrapper}`}>
                 <h3 className={style.title}>{type === 'values' ? 'Наши ценности скажут о нас больше:' : 'Живая лента'}</h3>
                 {type === "values" ? (
                         <>
@@ -57,10 +57,29 @@ export const CustomSwiper = ({type}: CustomSwiper)=>{
                             <Swiper
                                 ref={swiperRef}
                                 className={style.swiper}
-                                slidesPerView={4}
+                                loop={true}
                                 centeredSlides={false}
-                                spaceBetween={28}
-                                modules={[Navigation]} // Navigation module is still imported
+                                modules={[Navigation]}
+                                breakpoints={{
+                                    380:{
+                                        slidesPerView: 1,
+                                        spaceBetween: 0,
+                    
+                                    },
+                                    727:{
+                                        slidesPerView: 2,
+                                        spaceBetween: 28,
+                                        
+                                    },
+                                    937:{
+                                        slidesPerView: 3,
+                                        spaceBetween: 28,
+                                    },
+                                    1200:{
+                                        slidesPerView: 4,
+                                        spaceBetween: 28,
+                                    }
+                                }}
                             >
                                 {CardsList.map((item, index)=>{
                                     return(
